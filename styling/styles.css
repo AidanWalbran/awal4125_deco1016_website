@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica";
+}
+
+body {
+	height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 9em 1fr;
+  grid-template-rows: 100px 1fr; /*header size here*/
+  grid-template-areas: "header header" "nav content";
+}
+
+.header {
+	grid-area: header;
+	background-color: #243C7A;
+	border-bottom-right-radius: 50px;
+	display: inline-block;
+}
+
+.pageNav {
+	height: 100%;
+	width: 200px;
+	text-align: center;
+	list-style-type: none;
+	float: left;
+	padding: 40px 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.pageNav > a {
+	text-decoration: none;
+	font-size: 17px;
+	color: #f2f2f2;
+}
+
+.pageNav:hover {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.pageNav > a:active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#regButton {
+	width: 130px;
+	height: 60px;
+	border-radius: 30px;
+	border: none;
+	background-color: limegreen; /*temp colour*/
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	text-align: center;
+	vertical-align: center;
+}
+
+.nav {
+	grid-area: nav;
+	background-color: #EB1B5E;
+	border-bottom-right-radius: 50px;
+	/*height: 500px;*/
+}
+
+.content {
+	grid-area: content;
+	background-color: #43C6D0;
+}

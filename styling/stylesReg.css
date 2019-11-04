@@ -1,0 +1,44 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	font-family: "Helvetica";
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20vh 65vh 15vh;
+  grid-template-areas: "progress progress progress" "form form form" "footer footer footer";
+}
+
+.progress {
+	grid-area: progress;
+	background-color: firebrick;
+}
+
+.form {
+	grid-area: form;
+	background-color: peachpuff;
+	overflow: hidden;
+}
+
+#formTEST {
+	overflow: auto;
+}
+
+#nextButton {
+	float: right;
+	width: 60px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	color: #ffffff;
+	background-color: rebeccapurple;
+	padding: 10px 10px;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: tomato;
+}
