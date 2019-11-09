@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+      <meta charset='UTF-8' />
+      <link rel='stylesheet' href='../styling/stylesReg.css'/>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+      <title>Registration</title>
+</head>
+<body>
+      <main class="grid-container">
+            <header class="progress">
+            <a href="../index.html"> <img id="qudos_logo" src="../images/qudos_logo.png" height="58px" width="158px"> </a>
+                  <nav>
+                        <section class="completeNav"> <a href="registration-details.html"> <h4> Details </h4> </a> </section>
+                        <section class= "currentProgress" id = "nav-contact-information"><h4> Contact Information </h4> </section>
+                        <section class="progressNav"> <a href="registration-security.html"> <h4> Security </h4> </a> </section>
+                        <section class="progressNav"> <a href="registration-identification.html"> <h4> Identification </h4> </a> </section>
+                  </nav>
+            <img id="traveller" src="../images/travellerPNG/Traveller_01.png" width="77px" height="112px">
+            </header>
+            <article class="form">
+                  <section class="content-position">
+                        <h2> Open Account </h2>
+                        <form class="internal-form" id="form-contact" onsubmit="return validateContact()" action="registration-security.html">
+                        <h3>Contact Information</h3>
+                              <ul>
+                                    <li>
+                                          <label for="email"> Email ~ </label>
+                                          <input id="email" name="email" type="email" placeholder="- enter here -">
+                                    </li>
+                                    <li>
+                                          <label for="confirm-email"> Confirm email ~ </label>
+                                          <input id="confirm-email" name="confirm-email" type="email" placeholder="- enter here -">
+                                    </li>
+                                    <h4 id = "phone-number"> Phone number </h4> <p id="one-number-required"> (only one number required) </p>
+                                    <li>
+                                          <label for="mobile-phone"> Mobile phone ~ </label>
+                                          <input id="mobile-phone" name="mobile-phone" type="number" placeholder="- enter here -">
+                                    </li>
+                                    <li>
+                                          <label for="work-phone"> Work phone ~ </label>
+                                          <input id="work-phone" name="work-phone" type="number" placeholder="- enter here -">
+                                    </li>
+                                    <li>
+                                          <label for="home-phone"> Home phone ~ </label>
+                                          <input id="home-phone" name="home-phone" type="number" placeholder="- enter here -">
+                                    </li>
+                                          <section id = "residential-address">
+                                                <h3> Residential address </h3>
+                                                <li>
+                                                      <label for="unit-number-r"> Unit / suite number ~ </label>
+                                                      <input id="unit-number-r" name="unit-number-r" type="number" placeholder="- optional -">
+                                                </li>
+                                                <li>
+                                                      <label for="street-number-r"> Street number ~ </label>
+                                                      <input id="street-number-r" name="street-number-r" type="number" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                      <label for="street-name-r"> Street name ~ </label>
+                                                      <input id="street-name-r" name="street-name-r" type="text" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                      <label for="suburb-r"> Suburb ~ </label>
+                                                      <input id="suburb-r" name="suburb-r" type="text" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                <label for="state-r"> State ~ </label>
+                                                <select id="state-r" name="state-r">
+                                                      <option disabled label="state" selected value=""> state </option>
+                                                      <option label="ACT" value="ACT">ACT</option>
+                                                      <option label="NSW" value="NSW">NSW</option>
+                                                      <option label="NT" value="NT">NT</option>
+                                                      <option label="QLD" value="QLD">QLD</option>
+                                                      <option label="SA" value="SA">SA</option>
+                                                      <option label="TAS" value="TAS">TAS</option>
+                                                      <option label="WA" value="WA">WA</option>
+                                                      <option label="VIC" value="VIC">VIC</option>
+                                                </select>
+                                          </li>
+                                          <li>
+                                                <label for="postcode-r"> Postcode ~ </label>
+                                                <input id="postcode-r" name="postcode-r" type="number" placeholder="- enter here -">
+                                          </li>
+                                          <li>
+                                                <label for="same-address"> Make mailing address same as residential address? </label>
+                                                <input id="same-address" name="same-address" type="checkbox" onclick="onOffMailingAddress()">
+                                          </li>
+                                          </section>
+
+                                                <section id = "mailing-address">
+                                                <h3> Mailing address </h3>
+                                                <li>
+                                                      <label for="unit-number-m"> Unit / suite number ~ </label>
+                                                      <input id="unit-number-m" name="unit-number-m" type="number" placeholder="- optional -">
+                                                </li>
+                                                <li>
+                                                      <label for="street-number-m"> Street number ~ </label>
+                                                      <input id="street-number-m" name="street-number-m" type="number" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                      <label for="street-name-m"> Street name ~ </label>
+                                                      <input id="street-name-m" name="street-name-m" type="text" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                      <label for="suburb-m"> Suburb ~ </label>
+                                                      <input id="suburb-m" name="suburb-m" type="text" placeholder="- enter here -">
+                                                </li>
+                                                <li>
+                                                <label for="state-m"> State ~ </label>
+                                                <select id="state-m" name="state-m">
+                                                      <option disabled label="state" selected value=""> state </option>
+                                                      <option label="ACT" value="ACT">ACT</option>
+                                                      <option label="NSW" value="NSW">NSW</option>
+                                                      <option label="NT" value="NT">NT</option>
+                                                      <option label="QLD" value="QLD">QLD</option>
+                                                      <option label="SA" value="SA">SA</option>
+                                                      <option label="TAS" value="TAS">TAS</option>
+                                                      <option label="WA" value="WA">WA</option>
+                                                      <option label="VIC" value="VIC">VIC</option>
+                                                </select>
+                                          </li>
+                                          <li>
+                                                <label for="postcode-m"> Postcode ~ </label>
+                                                <input id="postcode-m" name="postcode-m" type="number" placeholder="- enter here -">
+                                          </li>
+                                          </section>
+                              </ul>
+                              <button type="submit" name="nextButton" form="form-contact" class="button" id="nextButton"><strong>Next</strong></button>
+                              <button type="button" name="backButton" class="button" onclick="back()" id="backButton"><strong>Back</strong></button>
+                              <button type="button" name="saveButton" class="button" onclick="home()" id="saveButton"><strong>Save and exit</strong></button>
+                              <section id="invalid-form" class = "invalid-form"></section>
+                        </form>
+                  </section>
+          </article>
+          <footer class="footer">
+            <p id="footer-top-text"> © Qudos Mutual Limited trading as Qudos Bank ABN AFSL/Australian Credit Licence 238 305. | BSB 704 865 </p>
+            <br/>
+            <p> Contact us: 1300 747 747 </p>    
+          </footer>
+      </main>
+      <script type = "text/javascript" src="../script/form_input_contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+var Name_Output = localStorage.getItem("Name");
+var Text_Placement = document.getElementById("testID");
+// document.getElementById("testID").innerHTML = nm;
+var Name_Heading = document.createElement("h1");
+Name_Heading.setAttribute("id", "scriptText");
+var thanksStart = document.createTextNode("Thank you, ");
+var Name_Color = document.createElement("span");
+var thanksName = document.createTextNode(Name_Output);
+Name_Color.appendChild(thanksName);
+Name_Color.setAttribute("id", "scriptName");
+var thanksEnd = document.createTextNode(", for signing up with Qudos Bank");
+Name_Heading.appendChild(thanksStart);
+Name_Heading.appendChild(Name_Color);
+Name_Heading.appendChild(thanksEnd);
+Text_Placement.appendChild(Name_Heading);
+// document.getElementById("YEET").color="#9CC0E7";

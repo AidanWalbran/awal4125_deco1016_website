@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<link rel='stylesheet' href='../styling/stylesReg.css'/>
+    	      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+		<title>Registration</title>
+	</head>
+	<body>
+		<main class="grid-container">
+			<header class="progress">
+                  <a href="../index.html"> <img id="qudos_logo" src="../images/qudos_logo.png" height="58px" width="158px"> </a>
+                        <nav>
+                              <section class="currentProgress"> <h4> Details </h4> </section>
+                              <section class="progressNav" id = "nav-contact-information"> <a href="registration-contact.html"> <h4> Contact Information </h4> </a> </section>
+                              <section class="progressNav"> <a href="registration-security.html"> <h4> Security </h4> </a> </section>
+                              <section class="progressNav"> <a href="registration-identification.html"> <h4> Identification </h4> </a> </section>
+                        </nav>
+                  <img id="traveller" src="../images/travellerPNG/Traveller_04.png" width="77px" height="112px">
+                  </header>
+			<article class="form">
+                        <section class="content-position">
+                              <h2> Open Account </h2>
+				      <form class="internal-form" id="form-details" onsubmit="return validateDetails()" action="registration-contact.html">
+					<h3>Details</h3>
+            				<ul>
+            					<!-- 
+            					Example code if need be ~ DELETE LATER
+            					<li>
+            						<label for="name">Name</label>  required autofocus makes the field a necessary input
+            						<input id="first-name" name="first-name" type="text" placeholder="E.g. " required autofocus>
+            					</li> 
+            					-->
+            					<li>
+            					<label for="title"> Title ~ </label> <!-- <select id="title" name="title" data-form-required> -->
+            						<select id="title" name="title">
+            						      <option disabled label="title" selected value="">title</option>
+            						      <option label="Dr." value="Dr.">Dr.</option>
+            						      <option label="Mr." value="Mr.">Mr.</option>
+            						      <option label="Mrs." value="Mrs.">Mrs.</option>
+            						      <option label="Ms." value="Ms.">Ms.</option>
+            						      <option label="Other" value="Other">Other</option>
+      						      </select>
+            					</li>
+            					<li>
+            						<label for="name"> Name ~ </label> <!-- needs to be inline with above option -->
+            						<input id="first-name" name="first-name" type="text" placeholder="- enter here -" />
+            						<input id="middle-name" name="middle-name" type="text" placeholder="- optional -"/>
+            						<input id="surname" name="surname" type="text" placeholder="- enter here -"/>
+            					</li>
+            					<li>
+            						<label for="gender"> Gender ~ </label>
+                                                <label class="gender-label">
+                                                Male
+                                                <input id="gender-1" name="gender" type="radio">
+                                                </label>
+                                                <label class="gender-label">
+                                                Female
+                                                <input id="gender-2" name="gender" type="radio">
+                                                </label>
+                                                <label class="gender-label">
+                                                Other
+                                                <input id="gender-3" name="gender" type="radio">
+                                                </label>
+            					</li>
+                                          <br/>
+                                          <br/>
+            					<li>
+            						<label for="dob" class="dob"> Date of birth ~ </label>
+            						<input id="dob" class="dob" name="dob" type="date">
+            					</li>
+            					<li>
+            						<label for="occupation"> Occupation ~ </label>
+            						<input id="occupation" name="occupation" type="text" placeholder="- enter here -">
+            					</li>
+            					<li>
+            						<label for="tfn"> Tax file number ~ </label>
+            						<input id="tfn" name="tfn" type="number" placeholder="- optional -">
+            					</li>
+            					<li>
+            						<label for="australian-citizen"> Australian Citizen / Resident? </label>
+      					        <input id="australian-citizen" name="australian-citizen" type="checkbox">
+            					</li>
+            					<li>
+            						<label for="frequent-flyer"> Frequent flyer member? </label>
+      					        <input id="frequent-flyer" name="frequent-flyer" type="checkbox">
+            					</li>
+      		      		</ul>
+                                    <button type="submit" name="nextButton" form="form-details" class="button" id="nextButton"><strong>Next</strong></button>
+                                    <button type="button" name="backButton" class="button" onclick="back()" id="backButton"><strong>Back</strong></button>
+                                    <button type="button" name="saveButton" class="button" onclick="home()" id="saveButton"><strong>Save and exit</strong></button>
+                                    <section id="invalid-form" class = "invalid-form"></section>
+                              </form>
+				</section>
+		    </article>
+		    <footer class="footer">
+                  <p id="footer-top-text"> © Qudos Mutual Limited trading as Qudos Bank ABN AFSL/Australian Credit Licence 238 305. | BSB 704 865 </p>
+                  <br/>
+                  <p> Contact us: 1300 747 747 </p>    
+                </footer>
+		</main>
+            <script type = "text/javascript" src="../script/form_input_details.js"></script>
+	</body>
+</html>
